@@ -1,5 +1,9 @@
 
-.hero{ position:relative; overflow:hidden; }
+.hero{ 
+  position:relative; 
+  overflow:hidden; 
+
+}
 
 
 .stars{
@@ -11,7 +15,7 @@
   object-position: center;    
   mix-blend-mode: screen;     
   pointer-events: none;      
-  z-index: 1;                 /* unter Text bzw.anderen Overlays */
+  z-index: 0;                 /* unter Text bzw.anderen Overlays */
   opacity: .22;               /* Grundhelligkeit */
 }
 

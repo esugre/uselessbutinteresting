@@ -70,6 +70,13 @@ li a:hover {
 
 }
 
+.article a,
+.article a:link,
+.article a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
 .article p {
     font-size: 14px;
 }
@@ -112,3 +119,17 @@ li a:hover {
         margin-top: 20px;
     }
 }
+
+.post {
+    color: #e6cfa7;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position:relative;
+    margin: 0 auto;
+    padding: 50px;
+    z-index: 1;
+    max-width: 100ch;
+    text-align: justify;
+
+
+}
+
