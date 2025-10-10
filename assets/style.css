@@ -1,50 +1,50 @@
 body, html {
-    height: 100%;
+    height: 100%; /* auf die volle Fensterhöhe anpassen */
 }
 
 .menu {
 
     background-color: #1E1C1A;
     color: #E6CFA7;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+    display: flex; /* Flexbox aktiviert */
+    flex-direction: row; /* Boxen in einer Reihe anordnen */
+    justify-content: center; /* horizontal zentrieren */
+    align-items: center; /* vertikal zentrieren */
+    padding: 10px; /* Innenabstand */
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    border-bottom: 1px solid #e6cfa7;
-    list-style-type: none;
+    border-bottom: 1px solid #e6cfa7; /* untere Linie */
+    list-style-type: none; /* Listenpunkte ausblenden */
 
 }
 
-li a {
+li a { /* Links der Listenelemente betreffend */
     color: #E6CFA7;
-    text-decoration: none;
-    padding: 10px 15px;
+    text-decoration: none; /* Unterstriche der Links entfernen */
+    padding: 10px 15px; /* Vergrößerte Klickfläche */
     font-size: 18px;
 }
 
-li a:hover {
+li a:hover { /*Verhalten wenn man über die Links hovered */
     color: #F0E6D0;
     background-color: #24211E;
     text-decoration: none;
 }
 
-.hero {
+.hero { /* Titelbereich "Hero-Zone" */
 
-    min-height: 60vh;
-    display: flex;
+    min-height: 60vh; /* Mind. 60% der Fensterhöhe hoch */
+    display: flex; /* Flexbox für das Zentrieren */
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: center; /* Text innerhalb der Box zentrieren */
 
 }
 
-.hero-text {
+.hero-text { /* Text im Hero betreffend */
 
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: #E6CFA7;
-    opacity: 0.7;
+    opacity: 0.7; /* Leichte Transparenz */
 }
 
 .content {
@@ -52,83 +52,83 @@ li a:hover {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Umbruch auf nächste Zeile erlauben */
 }
 
-.article {
+.article { /* Die einzelnen "Karten" betreffend */
 
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: #F0E6D0;
     background-color: #1E1C1A;
-    width: 200px;
-    height: 200px;
-    padding: 30px;
-    margin: 10px;
-    border: 1px solid #e6cfa7;
-    opacity: 0.5;
+    width: 200px; /* Feste Breite */
+    height: 200px; /* Feste Höhe */
+    padding: 30px; /* Innenabstand */
+    margin: 10px; /*Außenabstand */
+    border: 1px solid #e6cfa7; /* Rahmen hinzugefügt */
+    opacity: 0.5; /* zu 50% komplett transparent */
     list-style-type: none;
 
 }
 
 .article a,
 .article a:link,
-.article a:visited {
-    color: inherit;
+.article a:visited { /* Links in Karten betreffend, regulär als auch hovered */
+    color: inherit; /* Links übernehmen Textfarbe der Karte */
     text-decoration: none;
 }
 
-.article p {
-    font-size: 14px;
+.article p { /*Absätze betreffend der Karten */
+    font-size: 14px; 
 }
 
 .article:hover {
-    opacity: 1;
-    background-color: #24211E;
+    opacity: 1; /* Volle Deckkraft beim hovern */
+    background-color: #24211E; /*Bissl hellerer Hintergrund */
 }
 
-.about-layout {
-    max-width: 1000px;
+.about-layout { /* Layout der About Seite, zwei Spalten*/
+    max-width: 1000px; 
     margin: auto;
     padding: 20px;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-start; /* Spalten oben ausrichten */
 }
 
-.bild {
-    flex: 0 0 300;
+.bild { /* Für das Bild der About-Seite, rechte Spalte */
+    flex: 0 0 400px; /* "Grund-Breite" */
     padding: 20px;
-    max-width: 40vw;
+    max-width: 40vw; /* max 40% der Breite */
     ;
 }
 
-.bild img {
-    width: 90%;
-    height: auto;
-    border-radius: 15px
+.bild img { /* Das Bild in der Bild-Spalte betreffend */
+    width: 90%; /* Nur 90% der Spaltenbreite */
+    height: auto; /* Um das Seitenverhältnis beizubehalten */
+    border-radius: 15px /* Abgerundete Ecken */
 }
 
-.about {
+.about { /* Textspalte About */
 
-    max-width: 50ch;
+    max-width: 50ch; /* 50 Zeichen für bessere Lesebreite */
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: #E6CFA7;
-    h1 {
-        margin-bottom: 10px;
+    h1 { /* untergeordneter Selektor für die Überschriftsart */
+        margin-bottom: 10px; /* Abstand unter h1 */
     }
     h2 {
-        margin-top: 20px;
+        margin-top: 20px; /* Abstand unter h2 */
     }
 }
 
-.post {
+.post { /* Blocgpost-Bereich */
     color: #e6cfa7;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    position:relative;
-    margin: 0 auto;
-    padding: 50px;
-    z-index: 1;
-    max-width: 100ch;
-    text-align: justify;
+    position:relative; /* Positionierung */
+    margin: 0 auto; /* horizontal zentrieren */
+    padding: 50px; /*Innenabtand */
+    z-index: 1; /*Stapelreihenfolge, da wir mehrere Layer haben zT */
+    max-width: 100ch; /* Maximale Textbreite */
+    text-align: justify; /* Blocksatz */
 
 
 }

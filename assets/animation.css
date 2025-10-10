@@ -1,56 +1,56 @@
 
-.hero{ 
-  position:relative; 
-  overflow:hidden; 
+.hero{ /* Titel Container */
+  position:relative; /* Relative Referenz für die Elemente */
+  overflow:hidden; /* Schneidet Überhang ab */
 
 }
 
 
-.stars{
-  position: absolute;
-  inset: 0;
+.stars{ /* Grundlegender Stil für die Stern Bilder */
+  position: absolute; /* Überlagert den Hero Container */
+  inset: 0; /* Füllt den Hero aus */
   width: 100%;
   height: 100%;
-  object-fit: cover;          
-  object-position: center;    
-  mix-blend-mode: screen;     
-  pointer-events: none;      
+  object-fit: cover; /* Bildskalierung ohne VErzerrung */
+  object-position: center; /* zentrierung des Bildes innerhalb des Rahmen */
+  mix-blend-mode: screen; /* hellt den Hintergrund auf, produziert den LEucht-Effekt */
+  pointer-events: none; /* blociert Klicks darunter */
   z-index: 0;                 /* unter Text bzw.anderen Overlays */
   opacity: .22;               /* Grundhelligkeit */
 }
 
-.tw1{
-  animation: twinkleA 6.5s ease-in-out infinite;
-  opacity:.28;
-  filter: brightness(1.4) contrast(1.15) blur(.2px);
+.tw1{ /* erster twinkletwinkle layer */
+  animation: twinkleA 6.5s ease-in-out infinite; /* leichtes pulsieren */
+  opacity:.28; /* bissl heller als base */
+  filter: brightness(1.4) contrast(1.15) blur(.2px); /* leichtes glühen / weichzeichnen */
 }
-.tw2{
-  animation: twinkleB 9s ease-in-out infinite;
-  opacity:.20;
-  filter: brightness(1.6) contrast(1.2) blur(.35px);
-}
-
-.tw3{
-  animation: spark 3.6s ease-in-out infinite;
-  opacity:.12;
-  filter: brightness(2.2) contrast(1.35) blur(.25px);
-  mix-blend-mode: screen;
+.tw2{ /* zweiter twinkle layer, bissl langsamer */
+  animation: twinkleB 9s ease-in-out infinite; /* anderer Rhytmus */
+  opacity:.20; /* bissl dunkler */
+  filter: brightness(1.6) contrast(1.2) blur(.35px); /* stärkerer Effekt */
 }
 
-@keyframes twinkleA{
+.tw3{ /* kurze blitz spitzen */
+  animation: spark 3.6s ease-in-out infinite; /* schnelles Funkeln */
+  opacity:.12; /* dunkelster layer */
+  filter: brightness(2.2) contrast(1.35) blur(.25px); /* Highlights */
+  mix-blend-mode: screen; /* Mix für zusätzliche Highlights */
+}
+
+@keyframes twinkleA{ /* Animation für sanftes Pulsieren */
   0%   { opacity:.14; filter: brightness(1.0)  contrast(1.0)  blur(.2px); }
   35%  { opacity:.36; filter: brightness(1.7)  contrast(1.25) blur(.25px); }
   70%  { opacity:.22; filter: brightness(1.3)  contrast(1.1)  blur(.22px); }
   100% { opacity:.16; filter: brightness(1.0)  contrast(1.0)  blur(.2px); }
 }
-@keyframes twinkleB{
+@keyframes twinkleB{ /* langsamere Wellen */
   0%   { opacity:.12; filter: brightness(1.0)  contrast(1.0)  blur(.35px); }
   30%  { opacity:.30; filter: brightness(1.9)  contrast(1.3)  blur(.38px); }
   60%  { opacity:.18; filter: brightness(1.2)  contrast(1.05) blur(.33px); }
   100% { opacity:.12; filter: brightness(1.0)  contrast(1.0)  blur(.35px); }
 }
 
-@keyframes spark{
+@keyframes spark{ /* schnelle, kruze Funken */
   0%, 12%, 100% { opacity:.06; filter: brightness(1.0) contrast(1.0) blur(.25px); }
   14%           { opacity:.42; filter: brightness(2.6) contrast(1.45) blur(.28px); }
   18%           { opacity:.10; filter: brightness(1.2) contrast(1.05) blur(.25px); }
